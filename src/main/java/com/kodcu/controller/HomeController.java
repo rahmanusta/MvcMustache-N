@@ -16,7 +16,7 @@ public class HomeController {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("home");
 
-        List<Book> kitaplar =
+        List<Book> bookList =
                 Arrays.asList(
                         new Book("Java ve Yazılım Tasarımı", 35d, "Altuğ B. Altıntaş", true),
                         new Book("Java Mimarisiyle Kurumsal Çözümler", 23d, "Rahman Usta", true),
@@ -26,7 +26,7 @@ public class HomeController {
                         new Book("Mobil Pazarlama - SoLoMo", 15d, "Kahraman-Pelin Arslan", false),
                         new Book("Mobil Pazarlama - SoLoMo", 15d, "Kahraman-Pelin Arslan", true));
 
-        modelAndView.addObject("kitaplar", kitaplar);
+        modelAndView.addObject("bookList", bookList);
 
         return modelAndView;
     }
